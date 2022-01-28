@@ -15,7 +15,7 @@ s = cgi.FieldStorage()
 username = s.getfirst("username")
 password = s.getfirst("password")
 
-form_ok = username = secret.username and password == secret.password
+form_ok = username == secret.username and password == secret.password
 
 cookie = SimpleCookie(os.environ["HTTP_COOKIE"])
 cookie_username = None
